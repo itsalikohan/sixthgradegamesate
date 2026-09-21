@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CecilHotel - Download Game</title>
+    <style>
+        /* Base page settings */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Container to manage the zoom effect */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Fullscreen background image with smooth zoom on hover */
+        .background-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        /* Zoom effect when hovering over the page */
+        body:hover .background-img {
+            transform: scale(1.06);
+        }
+
+        /* Dark overlay for better readability */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Top-right corner brand badge */
+        .top-brand {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .top-brand:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
+
+        .top-brand img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        .top-brand span {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Center content container */
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Game Title styling */
+        .game-title {
+            color: #ffffff;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            margin: 0 0 10px 0;
+        }
+
+        /* Buttons container */
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Download button common style */
+        .download-btn {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Different gradient for mobile button */
+        .download-btn.mobile {
+            background: linear-gradient(135deg, #f12711, #f5af19);
+            box-shadow: 0 10px 25px rgba(241, 39, 17, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Right Brand / Logo Link -->
+    <a href="https://itsalikohan.github.io/herobrinecraft/" class="top-brand" target="_blank">
+        <img src="87.png" alt="Herobrine Craft Logo">
+        <span>هیروبراین کرفت</span>
+    </a>
+
+    <!-- Background Image Container -->
+    <div class="bg-container">
+        <!-- Change 'my-game-bg.jpg' to your actual image file name -->
+        <img src="my-game-bg.jpg" alt="CecilHotel Background" class="background-img">
+    </div>
+    
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1 class="game-title">🧩 کلمات به‌ هم‌ ریخته</h1>
+        
+        <div class="buttons-container">
+            <!-- PC Download Link (MediaFire) -->
+            <a href="https://download1592.mediafire.com/lqvms9mlnhoghGregvmjjj04iND2Ok6V3Mkmu7ATpCNeALlodvoMjVepak9vijPhwuuPYsbDQt-unEay0guNzKSA-Ld-84vrrDVQn_TujmRETWah2CL418Dzmv79n7agzQKMDNenp23kkiaQNNZb8PZ6olSaRiorrgM0EEjkhC_cEtk/a6ehlo68u67qaql/CecilHotel.zip" class="download-btn" target="_blank">
+                💻 Download for PC
+            </a>
+            
+            <!-- Mobile Download Link (MediaFire) -->
+            <a href="https://download1591.mediafire.com/518s0mquqd1gHiSchC55IA83FfGI5AFxuxwRRQj6Wm0ZxVrfdYXr37gPzU9A1KBvAo0_t9WrDHGbOOJ77uNk6ow76SBgHBa9zLDN3uOz1uD-3Ie5FvKJ8lHkdy_3T-5NFGbUZOAIg1IiAOBS3G6xQzfVIB9-Il3JI-ejHmCEB3MzaQQ/z2xpjxoactw5823/cecilhotel.apk" class="download-btn mobile" target="_blank">
+                📱 Download for Mobile
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
